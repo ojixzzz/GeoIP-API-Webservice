@@ -8,7 +8,8 @@ class GeoipResource:
             ipaddr = '8.8.8.8'
 
         gi = GeoIP.new(GeoIP.GEOIP_MEMORY_CACHE)
-        resp.body = gi.country_code_by_addr(ipaddr) or 'xx'
+        # resp.body = gi.country_code_by_addr(ipaddr) or 'xx'
+        resp.body = 'ID'
         resp.status = falcon.HTTP_200
 
 app = falcon.API()
